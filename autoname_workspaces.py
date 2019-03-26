@@ -89,12 +89,12 @@ WINDOW_ICONS = {
     'nemo': fa.icons['copy'],
     'openscad': fa.icons['cube'],
     'pavucontrol': fa.icons['volume-up'],
-    'postman': fa.icons['space-shuttle'],
+    'postman': fa.icons['rocket'],
     'rhythmbox': fa.icons['play'],
     'robo3t': fa.icons['database'],
     'slack': fa.icons['slack'],
     'slic3r.pl': fa.icons['cube'],
-    'spotify': fa.icons['music'],  # could also use the 'spotify' icon
+    'spotify': fa.icons['spotify'],  # could also use the 'spotify' icon
     'steam': fa.icons['steam'],
     'subl': fa.icons['file-alt'],
     'subl3': fa.icons['file-alt'],
@@ -103,15 +103,22 @@ WINDOW_ICONS = {
     'thunderbird': fa.icons['envelope'],
     'totem': fa.icons['play'],
     'urxvt': fa.icons['terminal'],
+    'xterm-256color': fa.icons['terminal'],
     'xfce4-terminal': fa.icons['terminal'],
     'xournal': fa.icons['file-alt'],
     'yelp': fa.icons['code'],
     'zenity': fa.icons['window-maximize'],
     'zoom': fa.icons['comment'],
+    'gucharmap': fa.icons['window-maximize'],
+    'vlc': fa.icons['film'],
+    'jetbrains-datagrip': fa.icons['database'],
+    'gimp': fa.icons['image'],
+    'jetbrains-datagrip': fa.icons['database'],
+    'code': fa.icons['code']
 }
 
 # This icon is used for any application not in the list above
-DEFAULT_ICON = '*'
+DEFAULT_ICON = fa.icons['window-maximize']
 
 # Global setting that determines whether workspaces will be automatically
 # re-numbered in ascending order with a "gap" left on each monitor. This is
@@ -150,6 +157,9 @@ def rename_workspaces(i3, icon_list_format='default'):
         name_parts = parse_workspace_name(workspace.name)
         icon_list = [icon_for_window(w) for w in workspace.leaves()]
         new_icons = format_icon_list(icon_list, icon_list_format)
+        #new_icons = ' '.join([icon_for_window(w) for w in workspace.leaves()])
+        #new_icons = ' '.join([icon_for_window(w) for w in workspace.leaves()])
+        #new_icons = str(icon_for_window(workspace.leaves()[0]))
 
         # As we enumerate, leave one gap in workspace numbers between each monitor.
         # This leaves a space to insert a new one later.
