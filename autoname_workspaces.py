@@ -89,12 +89,12 @@ WINDOW_ICONS = {
     'nemo': fa.icons['copy'],
     'openscad': fa.icons['cube'],
     'pavucontrol': fa.icons['volume-up'],
-    'postman': fa.icons['rocket'],
+    'postman': fa.icons['space-shuttle'],
     'rhythmbox': fa.icons['play'],
     'robo3t': fa.icons['database'],
     'slack': fa.icons['slack'],
     'slic3r.pl': fa.icons['cube'],
-    'spotify': fa.icons['spotify'],  # could also use the 'spotify' icon
+    'spotify': fa.icons['spotify'],
     'steam': fa.icons['steam'],
     'subl': fa.icons['file-alt'],
     'subl3': fa.icons['file-alt'],
@@ -103,18 +103,23 @@ WINDOW_ICONS = {
     'thunderbird': fa.icons['envelope'],
     'totem': fa.icons['play'],
     'urxvt': fa.icons['terminal'],
-    'xterm-256color': fa.icons['terminal'],
     'xfce4-terminal': fa.icons['terminal'],
     'xournal': fa.icons['file-alt'],
     'yelp': fa.icons['code'],
     'zenity': fa.icons['window-maximize'],
     'zoom': fa.icons['comment'],
-    'gucharmap': fa.icons['window-maximize'],
-    'vlc': fa.icons['film'],
-    'jetbrains-datagrip': fa.icons['database'],
+    'DBeaver': fa.icons['database'],
+    'Gnome-calendar': fa.icons['calendar'],
+    'Mailspring': fa.icons['inbox'],
+    'code': fa.icons['code'],
+    'com-install4j-runtime-launcher-Launcher': fa.icons['paper-plane'],
+    'franz': fa.icons['comments'],
     'gimp': fa.icons['image'],
+    'inkscape': fa.icons['image'],
     'jetbrains-datagrip': fa.icons['database'],
-    'code': fa.icons['code']
+    'teams-for-linux': fa.icons['users'],
+    'vlc': fa.icons['film'],
+    'xterm-256color': fa.icons['terminal'],
 }
 
 # This icon is used for any application not in the list above
@@ -157,9 +162,6 @@ def rename_workspaces(i3, icon_list_format='default'):
         name_parts = parse_workspace_name(workspace.name)
         icon_list = [icon_for_window(w) for w in workspace.leaves()]
         new_icons = format_icon_list(icon_list, icon_list_format)
-        #new_icons = ' '.join([icon_for_window(w) for w in workspace.leaves()])
-        #new_icons = ' '.join([icon_for_window(w) for w in workspace.leaves()])
-        #new_icons = str(icon_for_window(workspace.leaves()[0]))
 
         # As we enumerate, leave one gap in workspace numbers between each monitor.
         # This leaves a space to insert a new one later.
