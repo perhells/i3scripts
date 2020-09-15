@@ -68,6 +68,7 @@ WINDOW_ICONS = {
     'eog': fa.icons['image'],
     'evince': fa.icons['file-pdf'],
     'evolution': fa.icons['envelope'],
+    'factorio': fa.icons['gamepad'],
     'feh': fa.icons['image'],
     'file-roller': fa.icons['compress'],
     'filezilla': fa.icons['server'],
