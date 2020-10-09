@@ -54,6 +54,7 @@ WINDOW_ICONS = {
     'Mailspring': fa.icons['inbox'],
     'Microsoft Teams - Preview': fa.icons['users'],
     'alacritty': fa.icons['terminal'],
+    'among us.exe': fa.icons['gamepad'],
     'atom': fa.icons['code'],
     'banshee': fa.icons['play'],
     'blender': fa.icons['cube'],
