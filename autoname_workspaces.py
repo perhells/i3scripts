@@ -107,6 +107,7 @@ WINDOW_ICONS = {
     'org.remmina.Remmina': fa.icons['laptop'],
     'pavucontrol': fa.icons['volume-up'],
     'postman': fa.icons['space-shuttle'],
+    'pulseUi': fa.icons['shield-alt'],
     'qbittorrent': fa.icons['download'],
     'rhythmbox': fa.icons['play'],
     'robo3t': fa.icons['database'],
